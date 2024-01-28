@@ -1,6 +1,6 @@
 ## Prerequisites
 
--   [Node.js](https://nodejs.org/) (>= 16.13.1)
+-   [Node.js](https://nodejs.org/) (>= 18.13.0)
 -   [yarn](https://yarnpkg.com/) (>= 1.22.17)
 
 ## Installation

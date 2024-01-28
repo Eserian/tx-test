@@ -33,6 +33,7 @@
     "@nestjs/config": "^3.1.1",
     "@nestjs/schedule": "^4.0.0",
     "@nestjs/schematics": "^10.0.0",
+    "@nestjs/swagger": "^7.2.0",
     "@nestjs/testing": "^10.0.0",
     "@nestjs/typeorm": "^10.0.1",
     "@types/express": "^4.17.17",
@@ -81,5 +82,9 @@
       "^@app/db(|/.*)$": "<rootDir>/libs/db/src/$1",
       "^@app/shared(|/.*)$": "<rootDir>/libs/shared/src/$1"
     }
+  },
+  "resolutions": {
+    "wrap-ansi": "7.0.0",
+    "string-width": "4.1.0"
   }
 }
