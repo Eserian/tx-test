@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { Tx } from 'shared/entities';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -16,7 +16,10 @@ export class TxService {
       await this.txRepository.maximum('blockNumber');
 
     if (!highestSavedBlockNumber) {
-      throw new NotFoundException('Transactions not found');
+      throw new BadRequestException('Address not found', {
+        cause: new Error(),
+        description: 'Transactions table is empty',
+      });
     }
 
     const startBlock = highestSavedBlockNumber - 100;
