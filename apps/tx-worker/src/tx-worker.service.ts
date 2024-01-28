@@ -130,17 +130,17 @@ export class TxService {
   }
 
   private async saveTxs(txs: TTx[]): Promise<void> {
-    const newTsx = [];
+    const newTxs = [];
     for (const tx of txs) {
       const transaction = this.txRepository.create({
         ...tx,
         blockNumber: parseInt(tx.blockNumber),
         value: parseInt(tx.value),
       });
-      newTsx.push(transaction);
+      newTxs.push(transaction);
     }
 
-    await this.txRepository.save(newTsx);
+    await this.txRepository.save(newTxs);
   }
 
   private async getLastSavedBlockNumber(): Promise<number> {
