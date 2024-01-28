@@ -18,4 +18,4 @@ import { TxController } from './tx-api.controller';
   providers: [TxService],
   controllers: [TxController],
 })
-export class TxApiServiceModule {}
+export class TxApiAppModule {}
