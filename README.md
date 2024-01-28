@@ -34,7 +34,7 @@ $ yarn start:tx-api:dev
 $ yarn format
 
 # generate migrations {name-migration} - change the name for your migration
-$ yarn migration:generate -- db/migrations/{name-migration}
+$ yarn migration:generate db/migrations/{name-migration}
 
 # run migrations
 $ yarn migration:run 
