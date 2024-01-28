@@ -16,7 +16,7 @@ export class TxService {
       await this.txRepository.maximum('blockNumber');
 
     if (!highestSavedBlockNumber) {
-      throw new NotFoundException();
+      throw new NotFoundException('Transactions not found');
     }
 
     const startBlock = highestSavedBlockNumber - 100;
